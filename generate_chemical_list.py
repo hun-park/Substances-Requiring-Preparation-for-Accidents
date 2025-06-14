@@ -46,6 +46,7 @@ def main(num_extra: int = 1000):
     for cas, year in accident_info.items():
         categories.setdefault(cas, set()).add('Accident')
         accident_years[cas] = year
+        
     for cas in toxic_cas:
         categories.setdefault(cas, set()).add('Toxic')
 
