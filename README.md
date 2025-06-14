@@ -1,74 +1,37 @@
-# 대한민국 사고대비물질 특성 기반 클러스터링
-## 1. 프로젝트 개요
-제공된 사고대비물질 목록의 CAS 번호를 이용해 웹에서 물리적/화학적 특성 데이터를 자동 수집하고, 머신러닝 클러스터링(K-Means)을 적용하여 유사한 위험 특성을 가진 그룹으로 분류하고 분석합니다.
+# 사고대비물질 데이터 수집 도구
 
-## 2. 작업 절차 (Workflow)
-* 1단계: 데이터 수집 (1_data_crawling.ipynb)
-CSV 파일에서 CAS 번호를 읽어 PubChem, NIST 등에서 분자량, 끓는점, 인화점, 폭발한계 등 주요 특성 정보를 크롤링하여 원본 데이터를 저장합니다.
-   
-* 2단계: 데이터 전처리 (2_data_preprocessing.ipynb)
-수집한 데이터의 단위를 통일하고 결측치를 처리합니다. 클러스터링 분석을 위해 모든 데이터를 숫자형으로 변환하고 표준화(scaling)합니다.
-   
-* 3단계: 클러스터링 모델링 (3_clustering_modeling.ipynb)
-정제된 데이터에 K-Means 알고리즘을 적용합니다. Elbow Method와 Silhouette Score를 이용해 최적의 군집 수(K)를 결정하고, 물질별 군집 라벨을 저장합니다.
-   
-* 4단계: 분석 및 시각화 (4_analysis_visualization.ipynb)
-PCA를 통해 고차원 데이터를 2차원으로 축소하여 클러스터링 결과를 시각화합니다. 각 군집의 통계적 특성을 분석하여 그룹별 위험성 프로파일을 해석합니다.
+이 저장소는 대한민국 "사고대비물질" 목록의 CAS 번호를 이용해 주요 물리·화학 특성을 수집하는 간단한 스크립트를 제공합니다.
 
-## 3. 프로젝트 구조
-```
-├── 1_data_crawling.ipynb
-├── 2_data_preprocessing.ipynb
-├── 3_clustering_modeling.ipynb
-├── 4_analysis_visualization.ipynb
-├── data/
-│   ├── 유해물질 목록 - 사고대비물질.csv
-│   ├── crawled_raw_data.csv
-│   ├── processed_data.csv
-│   └── clustering_results.csv
-├── requirements.txt
-└── README.md
+## 파일 구성
+
+- `cas_numbers_table.csv` – 사고대비물질 목록과 CAS 번호
+- `fetch_properties.py` – PubChem에서 기본 특성을 조회하여 `cas_numbers_property_table.csv`로 저장합니다.
+- `fetch_extended_properties.py` – PubChem, ChemSpider, NIST WebBook을 활용해 더 많은 특성을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다.
+- `requirements.txt` – 실행에 필요한 파이썬 패키지 목록
+
+## 사전 준비
+
+```bash
+pip install -r requirements.txt
 ```
 
-## 4. PubChem 속성 조회 스크립트 사용법
+`fetch_extended_properties.py`를 사용할 경우 ChemSpider API 키가 필요합니다. 환경변수 `CHEMSPIDER_API_KEY` 또는 `CHEMSPIDER_TOKEN`에 키를 설정하세요.
 
-`fetch_properties.py`는 `cas_numbers_table.csv`의 CAS 번호 목록을 읽어
-PubChem에서 기본 화학 특성을 조회한 뒤 `cas_numbers_property_table.csv`에 저장합니다.
+## 사용 방법
 
-### 실행 방법
+### 기본 특성 수집
 
-1. 필요한 파이썬 패키지를 설치합니다.
+```bash
+python fetch_properties.py
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+CAS 번호별로 분자식, 분자량, LogP 등 기본 정보를 `cas_numbers_property_table.csv`에 기록합니다.
 
-2. 스크립트를 실행합니다.
+### 확장 특성 수집
 
-   ```bash
-   python fetch_properties.py
-   ```
+```bash
+python fetch_extended_properties.py
+```
 
-성공적으로 완료되면 새 CSV 파일에 Molecule Formula, Molecular Weight 등 특성 정보가 기록됩니다.
+분자량, 끓는점, 녹는점, 밀도, log Kow 등을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다. 화씨나 켈빈으로 표시된 온도는 자동으로 섭씨로 변환됩니다.
 
-## 5. 확장 속성 조회 스크립트 사용법
-
-`fetch_extended_properties.py`는 PubChem, ChemSpider, NIST WebBook을
-조합하여 분자량, 끓는점, 녹는점, 밀도, log Kow 등의 값을 최대한 수집합니다.
-온도가 화씨나 켈빈으로 제공될 경우 자동으로 섭씨로 변환합니다.
-
-### 실행 방법
-
-1. 필요한 파이썬 패키지를 설치합니다.
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. 스크립트를 실행합니다.
-
-   ```bash
-   python fetch_extended_properties.py
-   ```
-
-실행이 완료되면 `cas_numbers_property_table_v2.csv` 파일에 추가적인 물성 정보가 저장됩니다.
