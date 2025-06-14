@@ -1,1 +1,7 @@
 script.log
+
+# generated images
+clusters_k*.png
+elbow.png
+
+__pycache__/
