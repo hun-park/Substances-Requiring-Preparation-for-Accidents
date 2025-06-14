@@ -3,6 +3,6 @@ script.log
 # generated images
 clusters_k*.png
 elbow.png
-results/
 
+results/
 __pycache__/
