@@ -1,5 +1,4 @@
 import os
-import re
 from itertools import combinations
 
 import matplotlib.pyplot as plt
@@ -19,21 +18,11 @@ DEF_NUMERIC_COLS = [
 
 
 def load_and_prepare(path: str) -> pd.DataFrame:
-    """Load CSV and clean numeric columns."""
+    """Load CSV and ensure numeric columns are parsed."""
     df = pd.read_csv(path)
-
-    def parse_density(x: str) -> float:
-        if pd.isna(x):
-            return float("nan")
-        m = re.search(r"^\s*([0-9]+\.?[0-9]*)", str(x))
-        return float(m.group(1)) if m else float("nan")
-
-    if "Density" in df.columns:
-        df["Density"] = df["Density"].apply(parse_density)
     for col in DEF_NUMERIC_COLS:
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
-    df = df.dropna(subset=DEF_NUMERIC_COLS)
     return df
 
 
@@ -54,7 +43,10 @@ def find_best_k(data, k_range):
 def cluster_feature_pairs(df: pd.DataFrame, features: list[str], k_range=range(2, 7)) -> None:
     os.makedirs("results", exist_ok=True)
     for f1, f2 in combinations(features, 2):
-        pair_data = df[[f1, f2]]
+        pair_df = df[["CAS", f1, f2]].dropna(subset=[f1, f2])
+        if len(pair_df) < 2:
+            continue
+        pair_data = pair_df[[f1, f2]]
         scaled = StandardScaler().fit_transform(pair_data)
         best_k, score = find_best_k(scaled, k_range)
         km = KMeans(n_clusters=best_k, random_state=0)
@@ -64,7 +56,7 @@ def cluster_feature_pairs(df: pd.DataFrame, features: list[str], k_range=range(2
         for label in sorted(set(labels)):
             idx = labels == label
             plt.scatter(pair_data.loc[idx, f1], pair_data.loc[idx, f2], label=f"Cluster {label + 1}")
-            for x, y, cas in zip(pair_data.loc[idx, f1], pair_data.loc[idx, f2], df.loc[idx, "CAS"].astype(str)):
+            for x, y, cas in zip(pair_data.loc[idx, f1], pair_data.loc[idx, f2], pair_df.loc[idx, "CAS"].astype(str)):
                 plt.text(x, y, cas, fontsize=6)
 
         plt.xlabel(f1)
@@ -79,7 +71,10 @@ def cluster_feature_pairs(df: pd.DataFrame, features: list[str], k_range=range(2
 
 
 def cluster_pca(df: pd.DataFrame, features: list[str], k_range=range(2, 7)) -> None:
-    data = df[features]
+    data_df = df[["CAS", *features]].dropna(subset=features)
+    if len(data_df) < 2:
+        return
+    data = data_df[features]
     scaled = StandardScaler().fit_transform(data)
     components = PCA(n_components=2, random_state=0).fit_transform(scaled)
     best_k, score = find_best_k(components, k_range)
@@ -90,7 +85,7 @@ def cluster_pca(df: pd.DataFrame, features: list[str], k_range=range(2, 7)) -> N
     for label in sorted(set(labels)):
         idx = labels == label
         plt.scatter(components[idx, 0], components[idx, 1], label=f"Cluster {label + 1}")
-        for x, y, cas in zip(components[idx, 0], components[idx, 1], df.loc[idx, "CAS"].astype(str)):
+        for x, y, cas in zip(components[idx, 0], components[idx, 1], data_df.loc[idx, "CAS"].astype(str)):
             plt.text(x, y, cas, fontsize=6)
     plt.xlabel("PC1")
     plt.ylabel("PC2")
@@ -103,7 +98,7 @@ def cluster_pca(df: pd.DataFrame, features: list[str], k_range=range(2, 7)) -> N
 
 
 def main() -> None:
-    df = load_and_prepare("cas_numbers_property_table_v2.csv")
+    df = load_and_prepare("cas_numbers_property_table_clean.csv")
     features = ["MolecularWeight", "BoilingPoint", "MeltingPoint", "log_kow"]
     cluster_feature_pairs(df, features)
     cluster_pca(df, features)
