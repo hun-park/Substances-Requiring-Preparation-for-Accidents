@@ -44,6 +44,22 @@ python preprocess_properties.py
 
 `cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
 
+### 데이터 전처리
+
+```bash
+python preprocess_properties.py
+```
+
+`cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
+
+
+### 데이터 전처리
+
+```bash
+python preprocess_properties.py
+```
+
+`cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
 
 ### 클러스터링 예제
 
