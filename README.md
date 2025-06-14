@@ -44,6 +44,14 @@ python preprocess_properties.py
 
 `cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
 
+### 데이터 전처리
+
+```bash
+python preprocess_properties.py
+```
+
+`cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
+
 
 ### 데이터 전처리
 
@@ -55,10 +63,13 @@ python preprocess_properties.py
 
 ### 클러스터링 예제
 
-`cluster_substances.py` 스크립트는 `cas_numbers_property_table_clean.csv` 파일을 사용해 물질들을 다양한 특성 조합으로 K-평균 클러스터링합니다. 분자량, 끓는점, 녹는점, log Kow 네 가지 특성의 모든 짝 조합과 네 특성을 PCA로 축소한 경우에 대해 최적의 클러스터 수(2~6 사이)를 결정하여 이미지로 저장합니다. 각 짝 조합별로 두 특성 값이 모두 존재하는 행만 사용하며, 그래프의 축에는 사용된 특성 조합이, 점 위에는 CAS 번호가 표시되고, 그래프 아래에는 실루엣 점수가 나타납니다. 결과 이미지는 `results/` 디렉터리에 저장되며 저장소에는 포함되지 않으므로 실행 후 직접 확인하세요.
+`cluster_substances.py` 스크립트는 `cas_numbers_property_table_clean.csv` 파일을 사용해 물질들을 다양한 특성 조합으로 K-평균 클러스터링합니다. 분자량, 끓는점, 녹는점, log Kow 네 가지 특성의 모든 짝 조합뿐 아니라 네 가지 특성을 모두 사용한 경우(2차원 PCA로 시각화)와 네 특성을 PCA로 축소한 경우에 대해 최적의 클러스터 수(2~6 사이)를 결정하여 이미지로 저장합니다. 각 짝 조합별로 두 특성 값이 모두 존재하는 행만 사용하며, 그래프의 축에는 사용된 특성 조합이, 점 위에는 CAS 번호가 표시되고, 그래프 아래에는 실루엣 점수가 나타납니다. 결과 이미지는 `results/` 디렉터리에 저장되며 저장소에는 포함되지 않으므로 실행 후 직접 확인하세요.
 
 ```bash
 python cluster_substances.py
 ```
 
-생성된 PNG 파일을 확인하여 적절한 클러스터 수를 판단할 수 있습니다.
+그래프와 함께 각 조합별 클러스터 결과를 정리한 CSV 파일도 `results/` 디렉터리에
+저장됩니다. CSV에는 CAS 번호와 사용된 특성 값, 클러스터 번호가 기록되며 각 군집의
+중심 CAS는 `IsCenter` 열이 `True`로 표시됩니다. 생성된 PNG 파일과 CSV 파일을 확인
+하여 적절한 클러스터 수를 판단할 수 있습니다.
