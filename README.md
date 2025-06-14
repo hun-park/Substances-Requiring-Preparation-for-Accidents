@@ -76,7 +76,7 @@ python cluster_substances.py
 
 ### 화학물질 리스트 생성 및 확장 특성 수집
 
-다음 두 스크립트를 사용하면 사고대비물질과 유독물질 목록을 결합하고 여기에 PubChem에서 얻은 CAS 번호 1000종을 추가한 `chemical_list.csv` 파일을 만들 수 있습니다. 생성된 목록을 기반으로 `fetch_extended_properties_list.py`를 실행하면 각 CAS 번호의 분자량, 끓는점, 녹는점, log Kow가 `chemical_properties.csv`에 저장됩니다.
+다음 두 스크립트를 사용하면 사고대비물질과 유독물질 목록을 결합하고 여기에 PubChem에서 얻은 CAS 번호 1000종을 추가한 `chemical_list.csv` 파일을 만들 수 있습니다. `generate_chemical_list.py`는 사고대비물질만 해당되는 경우 도입연도에 따라 `AccidentOnly_2015`와 `AccidentOnly_2019` 같이 구분된 `Category` 값을 부여하며 `Year` 열에도 도입연도를 기록합니다. 생성된 목록을 기반으로 `fetch_extended_properties_list.py`를 실행하면 각 CAS 번호의 분자량, 끓는점, 녹는점, log Kow가 `chemical_properties.csv`에 저장됩니다.
 
 ```bash
 python generate_chemical_list.py
