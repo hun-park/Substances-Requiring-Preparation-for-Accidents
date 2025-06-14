@@ -1,0 +1,6 @@
+CAS,MolecularWeight,BoilingPoint,MeltingPoint,log_kow
+50-00-0,30.026,"-6 °F at 760 mmHg (NIOSH, 2024)","-134 °F (NIOSH, 2024)",1.2
+60-34-4,46.072,"190 °F at 760 mmHg (EPA, 1998)","-62.3 °F (EPA, 1998)",-0.9
+64-18-6,46.025,"213.3 °F at 760 mmHg (NTP, 1992)","47.1 °F (NTP, 1992)",-0.2
+67-56-1,32.042,"148.3 °F at 760 mmHg (NTP, 1992)","-144 °F (NTP, 1992)",-0.5
+71-43-2,78.11,"176.2 °F at 760 mmHg (NTP, 1992)","41.9 °F (NTP, 1992)",2.1
