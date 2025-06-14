@@ -5,8 +5,14 @@ import pubchempy as pcp
 input_file = 'cas_numbers_table.csv'
 output_file = 'cas_numbers_property_table.csv'
 
-# List of property names we want from PubChem
-properties = ['MolecularWeight', 'BoilingPoint', 'MeltingPoint', 'Density']
+# List of property names available from PubChem
+properties = [
+    'MolecularFormula',
+    'MolecularWeight',
+    'XLogP',
+    'ExactMass',
+    'TPSA',
+]
 
 with open(input_file, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
@@ -15,14 +21,15 @@ with open(input_file, newline='', encoding='utf-8') as csvfile:
 results = []
 for cas in cas_numbers:
     try:
-        compound = pcp.get_compounds(cas, 'name')[0]
-        results.append({
-            'CAS': cas,
-            'MolecularWeight': compound.molecular_weight,
-            'BoilingPoint': compound.boiling_point,
-            'MeltingPoint': compound.melting_point,
-            'Density': compound.density,
-        })
+        props = pcp.get_properties(','.join(properties), cas, 'name')
+        if props:
+            entry = {'CAS': cas}
+            # Remove CID returned from PubChem
+            for key in properties:
+                entry[key] = props[0].get(key, '')
+            results.append(entry)
+        else:
+            print(f"No data found for {cas}")
     except Exception as e:
         print(f"Failed to fetch data for {cas}: {e}")
 
