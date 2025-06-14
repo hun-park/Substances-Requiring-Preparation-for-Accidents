@@ -7,6 +7,7 @@
 - `cas_numbers_table.csv` – 사고대비물질 목록과 CAS 번호
 - `fetch_properties.py` – PubChem에서 기본 특성을 조회하여 `cas_numbers_property_table.csv`로 저장합니다.
 - `fetch_extended_properties.py` – PubChem, ChemSpider, NIST WebBook을 활용해 더 많은 특성을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다.
+- `preprocess_properties.py` – `cas_numbers_property_table_v2.csv` 파일을 정리해 섭씨 변환 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
 - `requirements.txt` – 실행에 필요한 파이썬 패키지 목록
 
 ## 사전 준비
@@ -33,8 +34,15 @@ CAS 번호별로 분자식, 분자량, LogP 등 기본 정보를 `cas_numbers_pr
 python fetch_extended_properties.py
 ```
 
-분자량, 끓는점, 녹는점, 밀도, log Kow 등을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다. 온도는 웹사이트에 표시된 단위를 그대로 기록합니다.
+분자량, 끓는점, 녹는점, 밀도, log Kow 등을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다. 온도 값은 변환하지 않고 원본 단위를 그대로 기록합니다.
 
+### 데이터 전처리
+
+```bash
+python preprocess_properties.py
+```
+
+`cas_numbers_property_table_v2.csv` 파일을 읽어 화씨 값은 섭씨로 변환하고 `Density` 열을 제거한 후 `cas_numbers_property_table_clean.csv`로 저장합니다.
 
 ### 클러스터링 예제
 

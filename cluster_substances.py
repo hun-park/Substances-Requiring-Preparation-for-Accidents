@@ -14,7 +14,6 @@ DEF_NUMERIC_COLS = [
     "MolecularWeight",
     "BoilingPoint",
     "MeltingPoint",
-    "Density",
     "log_kow",
 ]
 

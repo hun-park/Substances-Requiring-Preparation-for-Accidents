@@ -60,9 +60,9 @@ def get_pubchem_data(cas: str):
         mp = _pug_view_value(cid, 'Melting Point')
         dens = _pug_view_value(cid, 'Density')
         if bp:
-            data['BoilingPoint'] = bp.strip()
+            data['BoilingPoint'] = bp
         if mp:
-            data['MeltingPoint'] = mp.strip()
+            data['MeltingPoint'] = mp
         if dens:
             data['Density'] = dens
     except Exception as e:
@@ -102,9 +102,9 @@ def get_nist_data(cas: str):
             value = tds[1].get_text(strip=True)
             units = tds[2].get_text(strip=True)
             if 'Tboil' in label and 'BoilingPoint' not in data:
-                data['BoilingPoint'] = f"{value} {units}".strip()
+                data['BoilingPoint'] = f"{value} {units}"
             elif 'Tfus' in label and 'MeltingPoint' not in data:
-                data['MeltingPoint'] = f"{value} {units}".strip()
+                data['MeltingPoint'] = f"{value} {units}"
     except Exception as e:
         print(f"NIST lookup failed for {cas}: {e}")
     return data
