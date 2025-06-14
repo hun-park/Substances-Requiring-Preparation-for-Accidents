@@ -1,0 +1,99 @@
+,,,,,,,,,,
+번호,사고대비물질(영문명 및 CAS 번호),CAS,제조ㆍ사용 수량(연간),보관ㆍ저장 수량,유독물질,허가물질,제한물질,금지물질,비고,도입연도
+1,포르말린 또는 포름알데히드[Formalin; Formaldehyde ; 50-00-0] 및 이를 1% 이상 함유한 혼합물,50-00-0,"1,500,000","200,000",TRUE,FALSE,TRUE,FALSE,유독물질 제한물질,2015
+2,메틸히드라진[Methylhydrazine ; 60-34-4] 및 이를 1% 이상 함유한 혼합물,60-34-4,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+3,포름산[Formic acid ; 64-18-6] 및 이를 25% 이상 함유한 혼합물,64-18-6,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+4,메틸알코올[Methylalcohol ; 67-56-1] 및 이를 85% 이상 함유한 혼합물,67-56-1,"1,500,000","200,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+5,벤젠[Benzene ; 71-43-2] 및 이를 85% 이상 함유한 혼합물,71-43-2,"1,500,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+6,염화 메틸[Methyl chloride ; 74-87-3] 및 이를 1% 이상 함유한 혼합물,74-87-3,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+7,메틸아민[Methylamine ; 74-89-5] 및 이를 25% 이상 함유한 혼합물,74-89-5,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+8,시안화 수소[Hydrogen cyanide ; 74-90-8] 및 이를 1% 이상 함유한 혼합물,74-90-8,"300,000","1,500",FALSE,FALSE,FALSE,FALSE,,2015
+9,염화 비닐[Vinyl chloride ; 75-01-4] 및 이를 0.1% 이상 함유한 혼합물,75-01-4,"1,500,000","200,000",TRUE,TRUE,FALSE,FALSE,유독물질 허가물질,2015
+10,이황화 탄소[Carbon disulfide ; 75-15-0] 및 이를 0.1% 이상 함유한 혼합물,75-15-0,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+11,산화 에틸렌[Ethylene oxide ; 75-21-8] 및 이를 0.1% 이상 함유한 혼합물,75-21-8,"1,500,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+12,포스겐[Phosgene ; 75-44-5] 및 이를 1% 이상 함유한 혼합물,75-44-5,"75,000",750,TRUE,FALSE,FALSE,FALSE,유독물질,2015
+13,트리메틸아민[Trimethylamine ; 75-50-3] 및 이를 25% 이상 함유한 혼합물,75-50-3,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+14,산화 프로필렌[Propylene oxide ; 75-56-9] 및 이를 0.1% 이상 함유한 혼합물,75-56-9,"1,500,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+15,메틸 에틸 케톤[Methyl ethyl ketone ; 78-93-3] 및 이를 25% 이상 함유한 혼합물,78-93-3,"1,500,000","200,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+16,메틸 비닐 케톤[Methyl vinyl ketone ; 78-94-4] 및 이를 1% 이상 함유한 혼합물,78-94-4,"1,500,000","200,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+17,아크릴산[Acrylic acid ; 79-10-7] 및 이를 25% 이상 함유한 혼합물,79-10-7,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+18,메틸 아크릴레이트[Methyl acrylate ; 96-33-3] 및 이를 25% 이상 함유한 혼합물,96-33-3,"1,500,000","200,000",FALSE,FALSE,FALSE,FALSE,,2015
+19,니트로벤젠[Nitrobenzene ; 98-95-3] 및 이를 25% 이상 함유한 혼합물,98-95-3,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+20,4-니트로톨루엔[4-Nitrotoluene ; 99-99-0] 및 이를 25% 이상 함유한 혼합물,99-99-0,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+21,벤질 클로라이드[Benzyl chloride ; 100-44-7] 및 이를 25% 이상 함유한 혼합물,100-44-7,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+22,아크롤레인[Acrolein ; 107-02-8] 및 이를 1.0% 이상 함유한 혼합물,107-02-8,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+23,알릴 클로라이드[Allyl chloride ; 107-05-1] 및 이를 25% 이상 함유한 혼합물,107-05-1,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+24,아크릴로니트릴[Acrylonitrile ; 107-13-1] 및 이를 0.1% 이상 함유한 혼합물,107-13-1,"1,500,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+25,에틸렌디아민[Ethylenediamine ; 107-15-3] 및 이를 25% 이상 함유한 혼합물,107-15-3,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+26,알릴 알코올[Allyl alcohol ; 107-18-6] 및 이를 25% 이상 함유한 혼합물,107-18-6,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+27,m-크레졸[m-Cresol ; 108-39-4] 및 이를 5% 이상 함유한 혼합물,108-39-4,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+28,톨루엔[Toluene ; 108-88-3] 및 이를 85% 이상 함유한 혼합물,108-88-3,"1,500,000","200,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+29,페놀[Phenol ; 108-95-2] 및 이를 5% 이상 함유한 혼합물,108-95-2,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+30,n-부틸아민[n-Butylamine ; 109-73-9] 및 이를 25% 이상 함유한 혼합물,109-73-9,"1,500,000","200,000",FALSE,FALSE,FALSE,FALSE,,2015
+31,트리에틸아민[Triethylamine ; 121-44-8] 및 이를 25% 이상 함유한 혼합물,121-44-8,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+32,아세트산 에틸[Ethyl acetate ; 141-78-6] 및 이를 25% 이상 함유한 혼합물,141-78-6,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+33,"시안화 나트륨[Sodium cyanide ; 143-33-9] 및 이를 1% 이상 함유한 혼합물. 다만, 베를린청(Ferric ferrocyanide)ㆍ황혈염(Potassium ferrocyanide)ㆍ적혈염(Potassium ferri-cyanide) 및 그 중 하나를 함유한 혼합물질은 제외한다.",143-33-9,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+34,에틸렌이민[Ethylenimine ; 151-56-4] 및 이를 25% 이상 함유한 혼합물,151-56-4,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+35,"톨루엔-2,4-디이소시아네이트[Toluene-2,4-diisocyanate(2,4-TDI) ; 584-84-9] 및 이를 25% 이상 함유한 혼합물",584-84-9,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+36,일산화 탄소[Carbon monoxide ; 630-08-0] 및 이를 25% 이상 함유한 혼합물,630-08-0,"300,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+37,아크릴로일 클로라이드[Acryloyl chloride ; 814-68-6] 및 이를 25% 이상 함유한 혼합물,814-68-6,"750,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+38,인화 아연[Zinc phosphide ; 1314-84-7] 및 이를 1% 이상 함유한 혼합물,1314-84-7,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+39,메틸 에틸 케톤 과산화물 [Methyl ethyl ketone peroxide ; 1338-23-4] 및 이를 25% 이상 함유한 혼합물,1338-23-4,"750,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+40,디이소시안산 이소포론[Isophorone diisocyanate ; 4098-71-9] 및 이를 25% 이상 함유한 혼합물,4098-71-9,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+41,나트륨[Sodium ; 7440-23-5] 및 이를 25% 이상 함유한 혼합물,7440-23-5,"30,000","1,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+42,염화 수소[Hydrogen chloride ; 7647-01-0] 및 이를 10% 이상 함유한 혼합물,7647-01-0,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+43,플루오르화 수소[Hydrogen fluoride ; 7664-39-3] 및 이를 1% 이상 함유한 혼합물,7664-39-3,"150,000","1,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+44,암모니아[Ammonia ; 7664-41-7] 및 이를 10% 이상 함유한 혼합물,7664-41-7,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+45,황산[Sulfuric acid ; 7664-93-9] 및 이를 10% 이상 함유한 혼합물,7664-93-9,"1,500,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+46,질산[Nitric acid ; 7697-37-2] 및 이를 10% 이상 함유한 혼합물,7697-37-2,"2,250,000","300,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+47,삼염화 인[Phosphorus trichloride ; 7719-12-2] 및 이를 25% 이상 함유한 혼합물,7719-12-2,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+48,불소[Fluorine ; 7782-41-4] 및 이를 25% 이상 함유한 혼합물,7782-41-4,"150,000","1,000",FALSE,FALSE,FALSE,FALSE,,2015
+49,염소[Chlorine ; 7782-50-5] 및 이를 25% 이상 함유한 혼합물,7782-50-5,"450,000","10,000",FALSE,FALSE,FALSE,FALSE,,2015
+50,황화 수소[Hydrogen sulfide ; 7783-06-4] 및 이를 25% 이상 함유한 혼합물,7783-06-4,"150,000","1,000",FALSE,FALSE,FALSE,FALSE,,2015
+51,아르신 또는 삼수소화 비소[Arsine; Arsenic trihydride ; 7784-42-1] 및 이를 0.1% 이상 함유한 혼합물,7784-42-1,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2015
+52,클로로술폰산[Chlorosulfonic acid ; 7790-94-5] 및 이를 25% 이상 함유한 혼합물,7790-94-5,"300,000","10,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+53,포스핀[Phosphine ; 7803-51-2] 및 이를 1% 이상 함유한 혼합물,7803-51-2,"15,000",500,TRUE,FALSE,FALSE,FALSE,유독물질,2015
+54,옥시염화 인[Phosphorus oxychloride ; 10025-87-3] 및 이를 25% 이상 함유한 혼합물,10025-87-3,"750,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+55,이산화 염소[Chlorine dioxide ; 10049-04-4] 및 이를 25% 이상 함유한 혼합물,10049-04-4,"150,000","20,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+56,디보란[Diborane ; 19287-45-7] 및 이를 25% 이상 함유한 혼합물,19287-45-7,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2015
+57,산화 질소[Nitric oxide ; 10102-43-9] 및 이를 1% 이상 함유한 혼합물,10102-43-9,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2015
+58,니트로메탄[Nitromethane ; 75-52-5] 및 이를 25% 이상 함유한 혼합물,75-52-5,"60,000","20,000",FALSE,FALSE,FALSE,FALSE,,2015
+59,질산 암모늄[Ammonium nitrate ; 6484-52-2] 및 이를 33% 이상 함유한 혼합물,6484-52-2,"90,000","30,000",FALSE,FALSE,FALSE,FALSE,,2015
+60,헥사민[Hexamine ; 100-97-0] 및 이를 25% 이상 함유한 혼합물,100-97-0,"90,000","30,000",FALSE,FALSE,FALSE,FALSE,,2015
+61,과산화 수소[Hydrogen peroxide ; 7722-84-1] 및 이를 35% 이상 함유한 혼합물,7722-84-1,"90,000","30,000",TRUE,FALSE,FALSE,FALSE,유독물질,2015
+62,염소산 칼륨[Potassium chlorate ; 3811-04-9] 및 이를 98% 이상 함유한 혼합물,3811-04-9,"15,000","5,000",FALSE,FALSE,FALSE,FALSE,,2015
+63,질산 칼륨[Potassium nitrate ; 7757-79-1] 및 이를 98% 이상 함유한 혼합물,7757-79-1,"90,000","30,000",FALSE,FALSE,FALSE,FALSE,,2015
+64,과염소산 칼륨[Potassium perchlorate ; 7778-74-7] 및 이를 98% 이상 함유한 혼합물,7778-74-7,"15,000","5,000",FALSE,FALSE,FALSE,FALSE,,2015
+65,과망간산 칼륨[Potassium permanganate ; 7722-64-7] 및 이를 98% 이상 함유한 혼합물,7722-64-7,"300,000","100,000",FALSE,FALSE,FALSE,FALSE,,2015
+66,염소산 나트륨[Sodium chlorate ; 7775-09-9] 및 이를 98% 이상 함유한 혼합물,7775-09-9,"15,000","5,000",FALSE,FALSE,FALSE,FALSE,,2015
+67,질산 나트륨[Sodium nitrate ; 7631-99-4] 및 이를 98% 이상 함유한 혼합물,7631-99-4,"90,000","30,000",FALSE,FALSE,FALSE,FALSE,,2015
+68,사린[O-Isopropyl methyl phosphonofiuoridate ; 107-44-8] 및 이를 1% 이상 함유한 혼합물,107-44-8,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2015
+69,염화 시안[Cyanogen chloride ; 506-77-4] 및 이를 1% 이상 함유한 혼합물,506-77-4,"75,000",750,TRUE,FALSE,FALSE,FALSE,유독물질,2015
+70,니켈 카르보닐[Nickel carbonyl ; 13463-39-3] 및 이를 0.1% 이상 함유한 혼합물,13463-39-3,"75,000",750,TRUE,FALSE,FALSE,FALSE,유독물질,2019
+71,모노게르만 또는 사수소화 게르마늄[(Germane ; Germanium tetrahydride ; 7782-65-2) 및 이를 1%이상 함유한 혼합물,7782-65-2,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+72,테트라플루오로에틸렌[Tetrafluoroethylene ; 116-14-3] 및 이를 25% 이상 함유한 혼합물,116-14-3,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+73,트리플루오로보란[Trifluoroborane ; 7637-07-2] 및 이를 1% 이상 함유한 혼합물,7637-07-2,"150,000","1,000",TRUE,FALSE,FALSE,FALSE,유독물질,2019
+74,트리클로로 붕소[Boron trichloride ; 10294-34-5] 및 이를 10% 이상 함유한 혼합물,10294-34-5,"150,000","1,000",FALSE,FALSE,FALSE,FALSE,,2019
+75,"헥사플루오로-1,3-부타디엔 [Hexafluoro-1,3-butadiene ; 685-63-2] 및 이를 25% 이상 함유한 혼합물",685-63-2,"15,000",500,TRUE,FALSE,FALSE,FALSE,유독물질,2019
+76,브롬[Bromine ; 7726-95-6] 및 이를 1% 이상 함유한 혼합물,7726-95-6,"75,000",750,TRUE,FALSE,FALSE,FALSE,유독물질,2019
+77,세렌화 수소[Hydrogen selenide ; 7783-07-5] 및 이를 1% 이상 함유한 혼합물,7783-07-5,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+78,이소프렌[Isoprene ; 78-79-5] 및 이를 25% 이상 함유한 혼합물,78-79-5,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2019
+79,"1,1-디클로로에틸렌[1,1-Dichloroethylene ; 75-35-4] 및 이를 25% 이상 함유한 혼합물",75-35-4,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+80,헥사메틸디실록산[Hexamethyl disiloxane ; 107-46-0] 및 이를 25% 이상 함유한 혼합물,107-46-0,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+81,펜타카르보닐 철[Pentacarbonyl iron ; 13463-40-6] 및 이를 0.1% 이상 함유한 혼합물,13463-40-6,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+82,오불화 브롬[Bromine pentafluoride ; 7789-30-2] 및 이를 1% 이상 함유한 혼합물,7789-30-2,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+83,염화 티오닐[Thionyl chloride ; 7719-09-7] 및 이를 25% 이상 함유한 혼합물,7719-09-7,"75,000",750,TRUE,FALSE,FALSE,FALSE,유독물질,2019
+84,사염화 타이타늄[Titanium tetrachloride ; 7550-45-0] 및 이를 1% 이상 함유한 혼합물,7550-45-0,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+85,클로로피크린[Chloropicrin ; 76-06-2] 및 이를 1% 이상 함유한 혼합물,76-06-2,"75,000",750,TRUE,FALSE,FALSE,TRUE,유독물질 금지물질,2019
+86,비닐 에틸 에테르[Vinyl ethyl ether ; 109-92-2] 및 이를 25% 이상 함유한 혼합물,109-92-2,"1,500,000","20,000",FALSE,FALSE,FALSE,FALSE,,2019
+87,실란[Silane ; 7803-62-5] 및 이를 10% 이상 함유한 혼합물,7803-62-5,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+88,디실란[Disilane ; 1590-87-0] 및 이를 10% 이상 함유한 혼합물,1590-87-0,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+89,디클로로실란[Dichlorosilane ; 4109-96-0] 및 이를 10% 이상 함유한 혼합물,4109-96-0,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
+90,트리클로로실란[Trichlorosilane ; 10025-78-2] 및 이를 10% 이상 함유한 혼합물,10025-78-2,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+91,메틸디클로로실란[Methyldichlorosilane ; 75-54-7] 및 이를 10% 이상 함유한 혼합물,75-54-7,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+92,메틸트리클로로실란[Methyltrichlorosilane ; 75-79-6] 및 이를 10% 이상 함유한 혼합물,75-79-6,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+93,트리클로로비닐실란[Trichlorovinylsilane ; 75-94-5] 및 이를 10% 이상 함유한 혼합물,75-94-5,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+94,에틸트리클로로실란[Trichloroethylsilane ; 115-21-9] 및 이를 10% 이상 함유한 혼합물,115-21-9,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+95,테트라메틸실란[Tetramethylsilane ; 75-76-3] 및 이를 25% 이상 함유한 혼합물,75-76-3,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+96,테트라클로로 실리콘[Silicon Tetrachloride; 10026-04-7] 및 이를 10% 이상 함유한 혼합물,10026-04-7,"75,000",750,FALSE,FALSE,FALSE,FALSE,,2019
+97,테트라플루오로 실리콘[Silicon tetrafluoride ; 7783-61-1] 및 이를 1% 이상 함유한 혼합물,7783-61-1,"15,000",500,FALSE,FALSE,FALSE,FALSE,,2019
