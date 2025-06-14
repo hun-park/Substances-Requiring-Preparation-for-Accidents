@@ -50,3 +50,25 @@ PubChem에서 기본 화학 특성을 조회한 뒤 `cas_numbers_property_table.
    ```
 
 성공적으로 완료되면 새 CSV 파일에 Molecule Formula, Molecular Weight 등 특성 정보가 기록됩니다.
+
+## 5. 확장 속성 조회 스크립트 사용법
+
+`fetch_extended_properties.py`는 PubChem, ChemSpider, NIST WebBook을
+조합하여 분자량, 끓는점, 녹는점, 밀도, log Kow 등의 값을 최대한 수집합니다.
+온도가 화씨나 켈빈으로 제공될 경우 자동으로 섭씨로 변환합니다.
+
+### 실행 방법
+
+1. 필요한 파이썬 패키지를 설치합니다.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. 스크립트를 실행합니다.
+
+   ```bash
+   python fetch_extended_properties.py
+   ```
+
+실행이 완료되면 `cas_numbers_property_table_v2.csv` 파일에 추가적인 물성 정보가 저장됩니다.
