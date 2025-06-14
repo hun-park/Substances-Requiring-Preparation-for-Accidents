@@ -4,4 +4,5 @@ script.log
 clusters_k*.png
 elbow.png
 
+results/
 __pycache__/

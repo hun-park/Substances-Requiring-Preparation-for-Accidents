@@ -38,7 +38,7 @@ python fetch_extended_properties.py
 
 ### 클러스터링 예제
 
-`cluster_substances.py` 스크립트는 `cas_numbers_property_table_v2.csv` 파일을 활용해 물질들을 K-평균 알고리즘으로 클러스터링합니다. `k` 값을 2에서 6까지 변화시키며 각 점 위에 CAS 번호를 표시한 `clusters_k*.png` 이미지와 `elbow.png`를 생성합니다. 이 이미지 파일들은 저장소에 포함되지 않으므로 실행 후 생성된 파일을 직접 확인하세요.
+`cluster_substances.py` 스크립트는 `cas_numbers_property_table_v2.csv` 파일을 활용해 물질들을 다양한 특성 조합으로 K-평균 클러스터링합니다. 분자량, 끓는점, 녹는점, log Kow 네 가지 특성의 모든 짝 조합과 네 특성을 PCA로 축소한 경우에 대해 최적의 클러스터 수(2~6 사이)를 결정하여 이미지로 저장합니다. 각 그래프의 축에는 사용된 특성 조합이, 점 위에는 CAS 번호가 표시되며, 그래프 아래에는 실루엣 점수가 나타납니다. 결과 이미지는 `results/` 디렉터리에 저장되며 저장소에는 포함되지 않으므로 실행 후 직접 확인하세요.
 
 ```bash
 python cluster_substances.py
