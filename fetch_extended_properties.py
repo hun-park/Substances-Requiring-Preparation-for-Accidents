@@ -1,6 +1,5 @@
 import csv
 import os
-import re
 import requests
 from bs4 import BeautifulSoup
 import pubchempy as pcp
@@ -33,21 +32,6 @@ def _find_first_string(obj):
                 return result
     return None
 
-def _temp_to_celsius(value: str) -> float | None:
-    """Extract numeric temperature and convert to °C."""
-    if not value:
-        return None
-    m = re.search(r"(-?\d+(?:\.\d+)?)", value)
-    if not m:
-        return None
-    temp = float(m.group(1))
-    text = value.lower()
-    if "f" in text and "°f" in text:
-        return (temp - 32) * 5 / 9
-    if "k" in text and (" k" in text or text.endswith("k")):
-        return temp - 273.15
-    # default assume Celsius
-    return temp
 
 def _pug_view_value(cid: int, heading: str):
     url = f"https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{cid}/JSON?heading={heading.replace(' ', '%20')}"
@@ -76,13 +60,9 @@ def get_pubchem_data(cas: str):
         mp = _pug_view_value(cid, 'Melting Point')
         dens = _pug_view_value(cid, 'Density')
         if bp:
-            c = _temp_to_celsius(bp)
-            if c is not None:
-                data['BoilingPoint'] = c
+            data['BoilingPoint'] = bp
         if mp:
-            c = _temp_to_celsius(mp)
-            if c is not None:
-                data['MeltingPoint'] = c
+            data['MeltingPoint'] = mp
         if dens:
             data['Density'] = dens
     except Exception as e:
@@ -122,13 +102,9 @@ def get_nist_data(cas: str):
             value = tds[1].get_text(strip=True)
             units = tds[2].get_text(strip=True)
             if 'Tboil' in label and 'BoilingPoint' not in data:
-                c = _temp_to_celsius(f"{value} {units}")
-                if c is not None:
-                    data['BoilingPoint'] = c
+                data['BoilingPoint'] = f"{value} {units}"
             elif 'Tfus' in label and 'MeltingPoint' not in data:
-                c = _temp_to_celsius(f"{value} {units}")
-                if c is not None:
-                    data['MeltingPoint'] = c
+                data['MeltingPoint'] = f"{value} {units}"
     except Exception as e:
         print(f"NIST lookup failed for {cas}: {e}")
     return data

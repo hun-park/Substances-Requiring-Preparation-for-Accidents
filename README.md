@@ -33,7 +33,7 @@ CAS 번호별로 분자식, 분자량, LogP 등 기본 정보를 `cas_numbers_pr
 python fetch_extended_properties.py
 ```
 
-분자량, 끓는점, 녹는점, 밀도, log Kow 등을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다. 화씨나 켈빈으로 표시된 온도는 자동으로 섭씨로 변환됩니다.
+분자량, 끓는점, 녹는점, 밀도, log Kow 등을 수집하여 `cas_numbers_property_table_v2.csv`로 저장합니다. 온도 값은 변환하지 않고 원본 단위를 그대로 기록합니다.
 
 
 ### 클러스터링 예제
