@@ -29,3 +29,24 @@ PCA를 통해 고차원 데이터를 2차원으로 축소하여 클러스터링 
 ├── requirements.txt
 └── README.md
 ```
+
+## 4. PubChem 속성 조회 스크립트 사용법
+
+`fetch_properties.py`는 `cas_numbers_table.csv`의 CAS 번호 목록을 읽어
+PubChem에서 기본 화학 특성을 조회한 뒤 `cas_numbers_property_table.csv`에 저장합니다.
+
+### 실행 방법
+
+1. 필요한 파이썬 패키지를 설치합니다.
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. 스크립트를 실행합니다.
+
+   ```bash
+   python fetch_properties.py
+   ```
+
+성공적으로 완료되면 새 CSV 파일에 Molecule Formula, Molecular Weight 등 특성 정보가 기록됩니다.
