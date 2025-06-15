@@ -33,12 +33,6 @@ def main(limit: int | None = None):
     accident_info = load_accident_info()
     toxic_set = load_toxic_set()
 
-    with open('chemical_list.csv', newline='', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        cas_numbers = [row['CAS'] for row in reader]
-        if limit is not None:
-            cas_numbers = cas_numbers[:limit]
-
     fieldnames = [
         'CAS',
         'MolecularWeight',
@@ -58,6 +52,7 @@ def main(limit: int | None = None):
             props['도입연도'] = accident_info[cas]
         elif cas in toxic_set:
             props['분류'] = '유독물질'
+
         results.append(props)
 
     with open('chemical_properties.csv', 'w', newline='', encoding='utf-8') as f:
